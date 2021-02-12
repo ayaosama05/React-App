@@ -1,6 +1,6 @@
 # To run the project use the following command `yarn run start`
 
-## to run json server use `npx json-server --watch data/db.json --port 8000` to be able to see CRUD operations
+## to run json server use `npx json-server --watch data/db.json --port 8000`
 
 # Getting Started with Create React App
 
