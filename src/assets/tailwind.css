@@ -1,0 +1,1368 @@
+@tailwind base;
+@tailwind components;
+
+*{
+    @apply p-0 m-0 box-border;
+}
+/********************** Start of Aya.O Custom Style Section *************/
+* {
+  @apply box-border;
+}
+.primaryBTN:focus {
+  border: 2px solid #5034a6;
+}
+.secondaryBTN {
+  @apply flex items-center justify-center bg-white text-primary outline-none;
+  border: 1px solid #7048e8;
+}
+.secondaryBTN:hover {
+  @apply bg-grey-bg;
+}
+.secondaryBTN:focus {
+  @apply outline-none;
+  border: 2px solid #5034a6;
+}
+.TxtBTN {
+  @apply flex items-center justify-center text-accent outline-none;
+}
+.TxtBTN:hover {
+  @apply text-accent-hover;
+}
+.TxtBTN:focus {
+  @apply underline outline-none;
+}
+/*************** Inputs *************/
+.form--row {
+  @apply relative;
+}
+.form--row label {
+  @apply capitalize text-dark-grey font-light text-xs block mb-m;
+}
+.form--row .form--input {
+  @apply text-grey-shd1 font-normal text-sm px-m py-xsv w-18xl rounded-md border border-accent-shd7;
+}
+.form--input-left {
+  @apply text-grey-shd1 font-normal text-sm pl-xxl pr-m py-xsv w-18xl rounded-md border border-accent-shd7;
+}
+.form--row .form--input:hover,
+.form--input-left:hover {
+  @apply border border-grey-shd1;
+}
+.form--row .form--input:focus,
+.form--input-left:focus {
+  @apply border-dark outline-none;
+}
+.form--row .input--error {
+  @apply border-error hover:border-error focus:border-error;
+}
+.form--row .input--success {
+  @apply border-success hover:border-success focus:border-success;
+}
+.form--row .input--disabled {
+  @apply text-grey-shd3 pointer-events-none border-grey-shd4 cursor-not-allowed hover:border-grey-shd4 focus:border-grey-shd4;
+}
+.form--row .form--icon {
+  @apply absolute right-m opacity-0;
+  top: 2.75rem;
+}
+.form--icon-right + .form--icon {
+  @apply right-xl;
+}
+.form--row .form--input:focus ~ .form--icon {
+  @apply opacity-100;
+}
+.form--prefix {
+  @apply text-grey text-sm absolute left-xs flex flex-row items-center gap-xs;
+  top: 2.6rem;
+}
+.prefix-dropdown + input {
+  padding-left: 3.5rem;
+}
+.form--input-left:focus ~ .form--icon {
+  @apply opacity-100;
+}
+.form--icon-left {
+  @apply absolute top-xvxl left-m;
+}
+.form--icon-right {
+  @apply absolute top-3xl right-m;
+}
+.backdrop-blur {
+  filter: blur(16px);
+}
+.input-container {
+  @apply flex mb-5 align-middle items-center rounded-md border border-grey-shd5 border-opacity-100 bg-white px-4;
+}
+.input-container-focus {
+  @apply flex mb-5 align-middle items-center rounded-md border border-dark border-opacity-100 bg-white px-4;
+}
+.input-container-error {
+  @apply flex mb-5 align-middle items-center rounded-md border border-error border-opacity-100 bg-white px-4;
+}
+.input-container-success {
+  @apply flex mb-5 align-middle items-center rounded-md border border-success border-opacity-100 bg-white px-4;
+}
+.input-field {
+  @apply text-sm outline-none focus:outline-none w-80 h-10;
+}
+.input-icon {
+  @apply min-w-0 align-middle justify-center;
+}
+.input-check {
+  @apply rounded-sm w-6 h-6 border border-grey-shd4;
+}
+.input-check:checked .input-check {
+  @apply rounded-sm w-6 h-6 border border-primary bg-primary;
+}
+.input-check-checked {
+  @apply rounded-sm w-6 h-6 border border-primary bg-primary;
+}
+.switchBtn {
+  @apply relative inline-block rounded-xl h-6 w-4xxl align-middle;
+}
+.switchBtn input {
+  @apply opacity-0 w-0 h-0;
+}
+.round {
+  @apply absolute cursor-pointer top-0 bottom-0 left-0 right-0 bg-grey-shd4 transition duration-300 rounded-xl inline-block;
+}
+.round:before {
+  @apply absolute cursor-pointer w-4 h-4 left-1 top-1 bg-white transition duration-300 rounded-full;
+  content: '';
+}
+.switchBtn input:checked + .round {
+  @apply bg-primary-shd7;
+}
+.switchBtn input:checked + .round:before {
+  @apply bg-primary;
+}
+.switchBtn input:checked + .round:before {
+  @apply transform translate-x-4;
+}
+.switchBtn:hover,
+.switchBtn:focus {
+  @apply border-2 border-primary-shd5;
+}
+.switchBtn-sm {
+  @apply h-4 w-7;
+}
+.round-sm:before {
+  @apply w-2.5 h-2.5 top-3xs left-3xs;
+}
+.loader {
+  @apply border-r-8 border-b-8 border-error w-14 h-14 rounded-br-full;
+  /* border-radius: 0 0 3.5rem 0;*/
+}
+.loader-x {
+  @apply border-r-8 border-b-8 border-primary w-14 h-14 rounded-tl-full rounded-b-full;
+}
+/********* avatar ************/
+.avatar {
+  @apply w-14 h-14 rounded-xl;
+}
+.avatar-md {
+  @apply w-10 h-10 rounded-xl;
+}
+.avatar-sm {
+  @apply w-8 h-8 rounded-xl;
+}
+/******* custom radio *********/
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  /* margin-bottom: 12px;*/
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.checkContainer {
+  @apply block relative pl-8 mb-4 cursor-pointer text-lg select-none;
+}
+
+/* Hide the browser's default checkbox */
+.checkContainer input {
+  @apply absolute opacity-0 cursor-pointer h-0 w-0;
+}
+/* Create a custom checkbox */
+.checkspan {
+  @apply absolute top-0 left-0 h-6 w-6 bg-primary-shd7 rounded-sm;
+}
+/* On mouse-over, add a grey background color */
+.checkContainer:hover input ~ .checkspan {
+  @apply border border-grey-shd1;
+}
+/* When the checkbox is checked, add a blue background */
+.checkContainer input:checked ~ .checkspan {
+  @apply bg-primary;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkspan:after {
+  content: '';
+  @apply absolute hidden;
+}
+/* Show the checkmark when checked */
+.checkContainer input:checked ~ .checkspan:after {
+  @apply block;
+}
+/* Style the checkmark/indicator */
+.checkContainer .checkspan:after {
+  @apply w-1 h-3 border border-white transform rotate-45;
+  left: 43.05%;
+  top: 28.39%;
+  border-width: 0 3px 3px 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  height: 16px;
+  width: 16px;
+  @apply bg-white rounded-full absolute top-1 left-0;
+}
+.container:hover input ~ .checkmark {
+  @apply bg-white;
+}
+.container input:checked ~ .checkmark {
+  @apply bg-primary;
+}
+.checkmark:after {
+  content: '';
+  @apply absolute hidden;
+}
+.container input:checked ~ .checkmark:after {
+  @apply block;
+}
+.container .checkmark:after {
+  @apply bg-white rounded-full;
+  top: 4px;
+  left: 4px;
+  width: 6px;
+  height: 6px;
+}
+
+.arc {
+  @apply border-8 border-primary rounded-full relative;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.arc-after {
+  @apply bg-white absolute w-8 h-8;
+  right: -9px;
+  top: -9px;
+}
+
+/******** image input file ********/
+.inputfile {
+  @apply hidden absolute overflow-hidden;
+  width: 0.1px;
+  height: 0.1px;
+  z-index: -1;
+}
+.inputfile + label {
+  @apply bg-grey-shd7 text-accent flex justify-center items-center text-sm font-medium;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  @apply cursor-pointer;
+}
+.tab-group {
+  @apply bg-grey-bg;
+}
+.logo {
+  font-size: 18px;
+  @apply font-bold;
+}
+/*********** navigation ***********/
+.nav {
+  @apply float-right;
+}
+.logo {
+  @apply float-left w-auto;
+}
+.nav a {
+  @apply no-underline;
+}
+.nav li {
+  @apply list-none;
+}
+.nav ul {
+  @apply flex;
+}
+.nav li a {
+  @apply mr-l flex items-center justify-center h-6 w-6 rounded-full bg-grey-shd7;
+}
+.nav li a:hover path {
+  fill: #7048e8;
+}
+#menuToggle {
+  @apply hidden;
+}
+.menu-icon {
+  @apply hidden;
+}
+
+@media screen and (max-width: 475px) {
+  #menuToggle {
+    @apply h-6 w-6 rounded-full bg-grey-shd7;
+  }
+  .menu {
+    @apply relative;
+  }
+  .nav {
+
+  }
+  .menu ul {
+    @apply block overflow-hidden max-h-0 transition duration-75 mt-l;
+  }
+  .menu ul a {
+    @apply justify-center mt-l;
+  }
+  .menu-icon {
+    @apply absolute flex justify-center items-center top-0 h-6 w-6 rounded-full bg-grey-shd7 cursor-pointer;
+  }
+  #menuToggle:checked ~ ul {
+    max-height: 350px;
+  }
+}
+
+/********** voting meters *******/
+.circle-container {
+  @apply relative z-0;
+  width: 72px;
+  height: 72px;
+}
+.fill-circle {
+  @apply absolute	z-10 bg-white rounded-full;
+  margin: 7px 0px 0px 7px;
+  width: 58px;
+  height: 58px;
+}
+.quarter {
+  @apply w-1/2 h-1/2;
+}
+.top-left {
+  border-top-left-radius: 80px;
+  @apply float-left;
+}
+.top-right {
+  border-top-right-radius: 80px;
+  @apply float-right;
+}
+.bottom-left {
+  border-bottom-left-radius: 80px;
+  @apply float-left;
+}
+.bottom-right {
+  border-bottom-right-radius: 80px;
+  @apply float-right;
+}
+.dot {
+  @apply absolute z-10;
+  margin: 15px 0 0 21px;
+}
+
+.circle-container-sm {
+  @apply relative z-0;
+  width: 56px;
+  height: 56px;
+}
+.circle-container-sm .dot {
+  margin: 8px 0 0 15px;
+}
+.fill-circle-sm {
+  @apply absolute	z-10 bg-white rounded-full;
+  margin: 5.44px 0px 0px 5.44px;
+  width: 45.11px;
+  height: 45.11px;
+}
+.top-left-sm {
+  border-top-left-radius: 62px;
+  @apply float-left;
+}
+.top-right-sm {
+  border-top-right-radius: 62px;
+  @apply float-right;
+}
+.bottom-left-sm {
+  border-bottom-left-radius: 62px;
+  @apply float-left;
+}
+.bottom-right-sm {
+  border-bottom-right-radius: 62px;
+  @apply float-right;
+}
+/* The switch - the box around the slider */
+.switch {
+  @apply relative inline-block h-6;
+  width: 2.625rem;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  @apply opacity-0 h-0 w-0;
+}
+/****** The slider ******/
+.slider {
+  @apply absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-grey-shd4 transition duration-500 border-2 border-transparent;
+}
+.slider:hover {
+  @apply bg-grey-shd3;
+}
+.slider:before {
+  content: '';
+  @apply absolute w-4 h-4 left-xxs bg-white transition duration-500;
+  top: 0.2rem;
+}
+.switch-checkbox:checked + .slider {
+  @apply bg-primary-shd7;
+}
+.switch-checkbox:checked + .slider:hover {
+  @apply border-2 border-primary-shd5 bg-primary-shd6;
+}
+.switch-disabled .slider {
+  @apply bg-grey-shd6;
+}
+.switch-disabled .slider:hover {
+  @apply border border-transparent pointer-events-none;
+}
+input:focus + .slider {
+  @apply shadow-soft bg-grey-shd4;
+}
+
+input:checked + .slider:before {
+  @apply bg-primary;
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+/* Rounded sliders */
+/********* switch btn in small size *********/
+.switch-sm {
+  @apply relative inline-block h-6 w-7;
+}
+/* Hide default HTML checkbox */
+.switch-sm input {
+  @apply opacity-0 h-0 w-0;
+}
+.slider-sm {
+  @apply w-7 h-4 rounded-xl absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-grey-shd4 transition duration-500 border-2 border-transparent;
+}
+.slider-sm:hover {
+  @apply bg-grey-shd3;
+}
+.slider-sm:before {
+  content: '';
+  @apply absolute w-2.5 h-2.5 bg-white transition duration-500 rounded-full;
+  top: 0.05rem;
+  left: 0.1rem;
+}
+.slider-sm {
+  @apply absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-grey-shd4 transition duration-500 border-2 border-transparent;
+}
+.slider-sm:hover {
+  @apply bg-grey-shd3;
+}
+.slider-sm:before {
+  content: '';
+  @apply absolute w-2.5 h-2.5 bg-white transition duration-500;
+  top: 0.05rem;
+  left: 0.1rem;
+}
+.switch-checkbox-sm:checked + .slider-sm {
+  @apply bg-primary-shd7;
+}
+.switch-checkbox-sm:checked + .slider-sm:hover {
+  @apply border-2 border-primary-shd5 bg-primary-shd6;
+}
+.switch-checkbox-sm:checked + .slider-sm:before {
+  @apply bg-primary;
+  -webkit-transform: translateX(9px);
+  -ms-transform: translateX(9px);
+  transform: translateX(9px);
+}
+
+.slider.round {
+  @apply rounded-xl;
+}
+.slider.round:before {
+  @apply rounded-full;
+}
+.txtBtn:focus span {
+  @apply underline;
+}
+
+.voteBTN > svg:nth-child(odd) {
+  display: inline;
+}
+.voteBTN > svg:nth-child(even) {
+  display: none;
+}
+.voteBTN:hover > svg:nth-child(odd) {
+  display: none;
+}
+.voteBTN:hover > svg:nth-child(even) {
+  display: inline;
+}
+/********************** End of Aya.O Custom Style Section *************/
+.navbar{
+    @apply bg-white border-b border-grey-shd6 py-m px-m md:px-28 lg:px-60 flex justify-between items-center;
+}
+label.logo{
+    @apply text-subtitle;
+}
+.navbar ul{
+    @apply float-right mr-m flex items-center gap-l;
+}
+.navbar ul li{
+    @apply inline-block list-none w-6 h-6;
+}
+nav ul li a{
+    @apply no-underline mr-l flex items-center justify-center h-full w-full rounded-full bg-grey-shd7;
+}
+.checkbtn{
+    @apply hidden cursor-pointer float-right;
+}
+.navbar li a:hover path{
+    fill:#7048E8;
+}
+#check {
+  @apply hidden;
+}
+.checkbtn {
+  @apply hidden;
+}
+@media screen and (max-width: 475px) {
+  #check{
+    @apply h-6 w-6 rounded-full bg-grey-shd7;
+  }
+  .navbar ul{
+    @apply relative bg-white;
+  }
+  
+  .navbar ul {
+    @apply block overflow-hidden max-h-0 transition duration-75 mt-l;
+  }
+  .navbar ul a {
+    @apply justify-center mt-l;
+  }
+  .checkbtn {
+    @apply absolute flex justify-center items-center top-m right-m h-6 w-6 rounded-full bg-grey-shd7 cursor-pointer;
+
+  }
+  #check:checked ~ ul {
+      max-height: 350px;
+      @apply absolute top-m right-m flex flex-col;
+  }
+}
+
+.formRow{
+  @apply flex flex-row mb-xs items-center w-full py-m gap-m bg-white rounded-md;
+}
+.inputRow{
+  @apply h-10 mt-xxs flex border border-grey-shd4 py-xs pr-m pl-xs rounded-md w-full bg-white;
+}
+.myInput{
+  @apply bg-transparent text-sm w-full text-grey-shd1 focus:outline-none;
+}
+.imgAvatar{
+  @apply w-10 h-10 rounded-full;
+}
+.home{
+
+}
+form{
+  @apply my-m;
+}
+.Card{
+  @apply flex flex-row justify-between items-center text-dark-grey w-full p-m mb-m border-b-2 border-grey-shd6;
+}
+.card-header{
+  @apply flex text-dark flex-row items-center gap-m;
+}
+.card-avatar{
+  @apply w-10 h-10 rounded-full;
+}
+.CounterBtn{
+  @apply w-8 h-8 font-extrabold text-white bg-primary-shd1 rounded-full ml-m focus:outline-none;
+}
+
+/************* Buttons **********/
+.primaryBtnFocus:focus{
+  border: 2px solid #5034A6;
+}
+.secondaryBtnFocus:focus{
+  border: 2px solid #5034A6;
+}
+.primaryBtn{
+  @apply flex items-center justify-center flex-row border border-transparent focus:outline-none bg-primary hover:bg-primary-hover primaryBtnFocus rounded-xl capitalize text-white; 
+}
+.secondaryBtn{
+  @apply  flex items-center justify-center flex-row bg-white hover:bg-grey-bg text-primary border border-primary focus:outline-none secondaryBtnFocus rounded-xl capitalize;
+}
+.BtnLarge{
+  @apply gap-sv text-md font-bold py-sv px-xl;
+}
+.BtnMedium{
+  @apply gap-s text-base font-medium py-xsv px-l;
+}
+.BtnSmall{
+  @apply gap-xs text-sm font-medium py-xxsv px-m;
+}
+.manageBtn{
+  @apply text-accent focus:outline-none focus:underline text-base;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+}
+
+form {
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+input.myInp[type="text"],
+input.myInp[type="password"],
+input.myInp[type="date"],
+input.myInp[type="datetime"],
+input.myInp[type="email"],
+input.myInp[type="number"],
+input.myInp[type="search"],
+input.myInp[type="tel"],
+input.myInp[type="time"],
+input.myInp[type="url"],
+textarea.myInp,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+select.myInp {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+button.subBtn {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+label.lbl {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* 404 Styling */
+.header
+{	font-size: 13.0rem;
+	font-weight: 700;
+	margin: 2% 0 2% 0;
+	text-shadow: 0px 3px 0px #7f8c8d;
+}
+/* Error Styling */
+.error{
+	margin: -70px 0 2% 0;
+	font-size: 7.4rem;
+	text-shadow: 0px 3px 0px #7f8c8d;
+	font-weight: 100;
+}
+
+* {
+  outline: none !important;
+}
+
+.btn-primary-large {
+  @apply box-border bg-primary-shd1 text-white rounded-xl border-2 border-transparent py-3.5 px-8 text-md font-bold;
+}
+
+.btn-primary-med {
+  @apply box-border bg-primary-shd1 text-white rounded-xl border-2 border-transparent py-2 px-6 text-base font-medium;
+}
+
+.btn-primary-small {
+  @apply box-border bg-primary-shd1 text-white rounded-xl border-2 border-transparent py-1.5 px-4 text-sm font-medium;
+}
+
+.round-btn {
+  @apply bg-primary-shd1 rounded-full  border-2 border-transparent;
+}
+
+.btn-secoundry-large {
+  @apply text-primary-shd1 rounded-xl border-2 border-primary-shd1 py-3.5 px-8 text-md font-bold;
+}
+
+.btn-secoundry-med {
+  @apply text-primary-shd1 rounded-xl border-2 border-primary-shd1 py-2 px-6 text-base font-medium;
+}
+
+.btn-secoundry-small {
+  @apply text-primary-shd1 rounded-xl border-2 border-primary-shd1 py-1.5 px-4 text-sm font-medium;
+}
+
+.round-btn-secoundry {
+  @apply text-primary-shd1 border-primary-shd1 rounded-full  border-2;
+}
+
+.txt-btn-large {
+  @apply text-md font-bold text-accent-shd1  py-3.5 px-8;
+}
+
+.txt-btn-med {
+  @apply text-base font-bold text-accent-shd1  py-3.5 px-8;
+}
+
+.txt-btn-samll {
+  @apply text-sm font-bold text-accent-shd1  py-3.5 px-8;
+}
+
+.vote1-percent .progress {
+  stroke-dashoffset: calc(175.84 - (175.84 / 100 * 75));
+}
+
+.vote2-percent .progress {
+  stroke-dashoffset: calc(175.84 - (175.84 / 100 * 25));
+}
+
+/* Tabs */
+
+.tabs .with-icon input::before {
+  content: '';
+  display: block;
+  width: 13px;
+  height: 13px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.tabs .with-icon input:checked::after {
+  content: '';
+  display: block;
+  width: 13px;
+  height: 13px;
+  border: 4px solid #7048e8;
+  border-radius: 20px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Forms */
+
+.defualt input::placeholder,
+.focus-state input::placeholder,
+.error-state input::placeholder,
+.disable-state input::placeholder,
+.succes-state input::placeholder {
+  color: #94acb5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.defualt .relative {
+  width: fit-content;
+  block-size: fit-content;
+}
+
+.pipe::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  background-color: gray;
+  left: 0;
+  top: 0;
+}
+
+/* Toggels */
+.toggles span::before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 3px;
+  background-color: #fff;
+  transition: 0.4s;
+  border-radius: 100px;
+}
+
+.toggles span.small::before {
+  position: absolute;
+  content: '';
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 2px;
+  background-color: #fff;
+  transition: 0.4s;
+  border-radius: 100px;
+}
+
+.toggles input:checked + span {
+  background-color: #ede8fc;
+}
+
+.toggles input:checked:focus + span {
+  border: 1px solid #cabbf7;
+}
+
+.toggles input:focus + span {
+  border: 1px solid #b6cdd6;
+}
+
+.toggles input:checked + span::before {
+  background-color: #7048e8;
+  transform: translateX(17px);
+}
+
+.toggles input:checked + span.small::before {
+  background-color: #7048e8;
+  transform: translateX(9px);
+}
+
+.hoverEffect {
+  border: 3px solid transparent;
+}
+
+.hoverEffect:hover {
+  background-color: #5f3dc4;
+}
+
+.hoverEffect:focus {
+  border: #5f3dc4 3px solid;
+}
+
+.btn--secondary:focus {
+  border: #5f3dc4 2px solid;
+}
+
+/* color 0092C9, 100% not in config with 1 use */
+.text-accent:hover {
+  color: #0092c9;
+}
+
+.btn--secondary:hover {
+  background-color: #fafafc;
+}
+
+.btn--primary {
+  border: 9px solid red;
+  @apply bg-primary rounded-full text-white font-bold hoverEffect flex items-center justify-center content-center focus:outline-none;
+}
+
+.btn--primary--disabled {
+  @apply bg-opacity-25 bg-primary rounded-full text-white font-bold outline-none flex items-center justify-center content-center cursor-not-allowed;
+}
+
+.btn--secondary {
+  @apply text-primary bg-white font-bold border-2 border-primary rounded-full flex items-center justify-center content-center focus:outline-none;
+}
+
+.btn--secondary--disabled {
+  @apply border-2 border-grey-shd2 bg-white rounded-full text-grey-shd2 font-bold outline-none flex items-center justify-center content-center cursor-not-allowed;
+}
+
+.tab-poll {
+  padding-right: 12px;
+  @apply group text-sm relative flex items-center justify-around px-3.5 py-1.5 h-14 border border-grey border-opacity-0 bg-grey-shd7  hover:bg-white hover:border-opacity-100  rounded-full focus:outline-none transition duration-200 ease-in-out;
+}
+
+.checkmark-overlay {
+  @apply h-4 w-4 rounded-full border border-primary  bg-white text-transparent absolute left-0 top-1 mr-2 hover:bg-grey-shd4 transition duration-200 ease-in-out;
+}
+
+input:checked ~ .checkmark-overlay {
+  background-color: #7048e8;
+}
+
+/* Style the indicator (dot/circle) */
+.checkmark-overlay::after {
+  content: '';
+  position: absolute;
+  display: none;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: white;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
+}
+
+/* Show the indicator (dot/circle) when checked */
+input:checked ~ .checkmark-overlay::after {
+  display: block;
+}
+
+/*************************************  Safei Section End  ******************************/
+.radio__container {
+  @apply block h-6 w-6 relative cursor-pointer rounded-full group;
+}
+
+/* Hide the browser's default radio button */
+.radio__input {
+  @apply opacity-0;
+}
+
+/* Create a custom radio button, On mouse-over, add a grey background color */
+.radio__checkmark {
+  @apply group-hover:bg-grey-shd5 flex justify-center items-center absolute top-0 left-0 h-6 w-6 bg-white border border-solid border-primary rounded-full;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio__input:checked ~ .radio__checkmark {
+  @apply bg-primary;
+}
+
+.radio__dot {
+  @apply w-2 h-2 hidden bg-white rounded-full;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio__input:checked ~ .radio__checkmark .radio__dot {
+  @apply block;
+}
+
+.hover-state:hover {
+  background-color: #5f3dc4;
+}
+
+.focus-state:focus {
+  border: 2px solid #5034a6;
+}
+
+.opacity {
+  opacity: 0.24;
+}
+
+.btn-primary {
+  @apply bg-primary text-white rounded-full hover-state focus:outline-none focus-state flex items-center justify-center content-center mb-5;
+}
+
+.btn-primary-opacity {
+  @apply bg-primary bg-opacity-24 text-white rounded-full focus:outline-none flex items-center justify-center content-center mb-5;
+}
+
+.btn-secondary {
+  @apply bg-white text-primary border border-primary rounded-full hover:bg-grey-bg focus:outline-none focus-state flex items-center justify-center content-center mb-5;
+}
+
+.btn-secondary-opacity {
+  @apply bg-white opacity-25 text-primary border border-primary rounded-full  focus:outline-none flex items-center justify-center content-center mb-5;
+}
+
+.check-it {
+  @apply w-l h-l appearance-none outline-none border border-grey-shd4 rounded-sm text-white align-baseline;
+}
+
+.svg-check {
+  @apply absolute bottom-3.5 invisible;
+}
+
+.check-box input:checked,
+.check-box input:checked + .svg-check {
+  visibility: visible;
+  background-color: #5f3dc4;
+}
+
+.default-form {
+  @apply w-72 h-10 border outline-none rounded-md text-sm py-2.5 px-10 mb-10;
+}
+
+.svg-form {
+  @apply absolute right-3.5;
+  top: 2.875rem;
+}
+
+.svg-form-left {
+  @apply absolute left-3.5 top-11;
+}
+
+/* Radio buttons */
+.atom input[type='radio']:checked {
+  background-color: #7048e8;
+}
+
+.radio-button:active > label input[type='radio']:checked {
+  background-color: #7048e8;
+}
+
+.radio__container__h {
+  @apply block h-4 w-4 relative cursor-pointer rounded-full group;
+}
+
+.radio__input__h {
+  @apply opacity-0;
+}
+
+.radio__checkmark__h {
+  @apply group-hover:bg-grey-shd5 flex justify-center items-center absolute top-0 left-0 h-4 w-4 bg-white border border-solid border-primary rounded-full;
+}
+
+.radio__input__h:checked ~ .radio__checkmark__h {
+  @apply bg-primary;
+}
+
+.radio__dot__h {
+  @apply w-1.5 h-1.5 hidden bg-white rounded-full;
+}
+
+.radio__input__h:checked ~ .radio__checkmark__h .radio__dot__h {
+  @apply block;
+}
+
+.switch {
+  @apply relative inline-flex w-7 h-4;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  @apply w-0 h-0 opacity-0;
+}
+
+/* The slider */
+.slider {
+  @apply absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-grey-shd4;
+  transition: 0.2s;
+}
+
+.slider::before {
+  @apply absolute;
+  content: '';
+  height: 10px;
+  width: 10px;
+  top: 1.5px;
+  left: 2px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  @apply bg-primary;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider::before {
+  transform: translateX(12px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  @apply rounded-xl;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+.atom .parent .child .tab {
+  @apply flex justify-evenly items-center rounded-full w-6xl h-2xl bg-white ml-6;
+}
+
+.atom .parent .child .btn-primary {
+  @apply bg-primary hover:bg-primary-hover focus:ring-dark-btnFocus rounded-full text-white focus:outline-none ml-4 mt-4;
+}
+
+.atom .parent .child .btn-primary:focus {
+  @apply border-2 border-dark-btnFocus;
+}
+
+.atom .parent .child .btn-secondary {
+  @apply bg-white hover:bg-grey-bg ring-primary text-primary;
+}
+
+.atom .parent .child .btn-text {
+  @apply bg-none text-accent hover:text-accent-hover focus:underline focus:outline-none ml-4 mt-4;
+}
+
+.atom .parent .child .form-control {
+  @apply flex mb-4 mr-10;
+}
+
+.atom .parent .child .form-control form {
+  @apply relative;
+}
+
+.atom .parent .child .form-control form .label {
+  @apply text-xs text-dark-grey font-light mb-xs block;
+}
+
+.atom .parent .child .form-control form .form-input {
+  @apply w-19xl h-3xl py-xsvv px-m text-sm text-grey-shd1 font-normal border-grey-shd5 border rounded-md hover:border-grey-shd2 focus:text-dark-grey focus:border-dark focus:outline-none;
+}
+
+.atom .parent .child .form-control form .input-icon {
+  @apply hidden;
+}
+
+.atom .parent .child .form-control form .form-input:focus + .input-icon {
+  @apply block absolute top-38 right-12;
+}
+
+.atom
+  .parent
+  .child
+  .form-control
+  form
+  .form-input:focus::-webkit-input-placeholder {
+  @apply text-dark;
+}
+
+.atom .parent .child .form-control form .form-error {
+  @apply border-error focus:border-error;
+}
+
+.atom .parent .child .form-control form .form-success {
+  @apply border-success focus:border-success;
+}
+
+.atom .parent .child .form-control form .form-disabled {
+  @apply text-grey-shd4 border-grey-shd7;
+}
+
+.atom .parent .child .form-control form .input-right-icon {
+  @apply absolute top-38 right-12;
+}
+
+.atom .parent .child .form-control form .form-input:focus + .icon-focus {
+  @apply absolute top-38 right-40;
+}
+
+.atom .parent .child .form-control form .form-left-input {
+  @apply pl-xxvl;
+}
+
+.atom .parent .child .form-control form .home-icon {
+  @apply absolute top-38 left-12 opacity-50;
+}
+
+.atom .parent .child .form-control form .form-input:hover ~ .home-icon {
+  @apply opacity-70;
+}
+
+.atom .parent .child .form-control form .form-left-input:focus ~ .home-icon {
+  @apply opacity-100;
+}
+
+.atom .parent .child .form-control form .no-label-icon {
+  @apply top-3;
+}
+
+.atom .parent .child .form-control form .form-input:focus + .no-label-icon {
+  @apply top-3;
+}
+
+.atom .parent .child .form-control form .prefix {
+  @apply font-normal text-sm text-grey;
+}
+
+.atom .parent .child .form-control form .devider {
+  @apply w-px h-4 bg-grey-shd6 ml-xl;
+}
+
+.atom .parent .child .form-control form .prefix-input {
+  @apply pl-3xl;
+}
+
+.atom .parent .child .form-control form .dropdown {
+  @apply ml-l;
+}
+
+.atom .parent .child .form-control form .dropdown-devider {
+  @apply ml-xvxl;
+}
+
+.atom .parent .child .form-control form .dropdown-input {
+  @apply pl-4xl;
+}
+
+.parent .child .toggle-box .toggler {
+  @apply w-2xl h-xl rounded-full bg-grey-shd4 relative flex items-center px-1 cursor-pointer hover:bg-grey-shd3 transition duration-200 ease-out;
+}
+
+.parent .child .toggle-box .toggler .circle {
+  @apply bg-white w-4 h-4 rounded-full transition-all duration-500 ease-in-out;
+}
+
+.parent .child .toggle-box .checkbox {
+  @apply w-0 h-0 opacity-0 absolute;
+}
+
+.parent .child .toggle-box .checkbox:checked + .toggler .circle {
+  @apply bg-primary transform translate-x-4;
+}
+
+.parent .child .toggle-box .checkbox:checked + .toggler {
+  @apply bg-primary-shd7 border-2 border-primary-shd5;
+}
+
+.parent .child .toggle-box .checkbox:checked + .toggler:hover {
+  @apply bg-primary-shd6;
+}
+
+.parent .child .toggle-box .toggler-small {
+  @apply w-xl h-4 px-4xs;
+}
+
+.parent .child .toggle-box .toggler-small .circle-small {
+  @apply w-2.5 h-2.5;
+}
+
+.parent .child .toggle-box .checkbox:checked + .toggler-small .circle-small {
+  @apply translate-x-2.5;
+}
+
+.parent .child .checkbox-cat {
+  @apply relative;
+}
+
+.parent .child .checkbox-cat .checked {
+  @apply w-0 h-0 opacity-0 absolute;
+}
+
+.parent .child .checkbox-cat .checkmark {
+  @apply ml-6 mb-6 cursor-pointer bg-white w-6 h-6 border border-grey-shd4 flex items-center justify-center hover:border-grey-shd1 transition-all duration-200 ease-out;
+}
+
+.parent .child .checkbox-cat .checked:checked + .checkmark {
+  @apply bg-primary;
+}
+
+.parent .child .checkbox-cat .checked:checked + .checkmark:hover {
+  @apply bg-primary-hover;
+}
+
+.parent .child .checkbox-cat .checkmark-small {
+  @apply w-4 h-4;
+}
+
+.parent .child .radio-cat {
+  @apply relative;
+}
+
+.parent .child .radio-cat .radio {
+  @apply w-0 h-0 opacity-0 absolute;
+}
+
+.parent .child .radio-cat .radio-box {
+  @apply ml-6 mt-6 cursor-pointer rounded-full bg-white w-6 h-6 border border-grey-shd4 hover:border-grey-shd1 transition-all duration-200 ease-out;
+}
+
+.parent .child .radio-cat .radio:checked + .radio-box {
+  @apply border-primary border-7;
+}
+
+.parent .child .radio-cat .radio:checked + .radio-box:hover {
+  @apply border-primary-hover;
+}
+
+.parent .child .radio-cat .radio-small {
+  @apply w-4 h-4;
+}
+
+.parent .child .radio-cat .radio:checked + .radio-small {
+  @apply border-5;
+}
+
+#burger-toggler:focus + .nav-links {
+  @apply h-full w-full transition-all duration-200 ease-out;
+}
+
+.molecules .misc-box .radio-box.radio-tab {
+  @apply mt-0 ml-0;
+}
+.flex-child{
+  flex:1 0 50%;
+}
+/************************************* Twfiek Section end ******************************/
+
+/****************** Aya **************/
+.customForm{
+  @apply bg-white w-6/12 rounded-lg text-dark-grey border-2 border-primary p-6 my-14 mx-auto;
+}
+.customForm .SubmitBtn{
+  @apply bg-success text-white rounded-md text-base p-2 mt-4;
+}
+.customForm .addBtn{
+  @apply bg-primary text-white rounded-md text-base p-2;
+}
+.customForm .addOption{
+  @apply bg-transparent flex mt-xxs text-sm w-full text-accent focus:outline-none rounded-md;
+}
+.customForm .addContainer{
+  @apply border border-accent py-2 px-4 w-full rounded-md;
+}
+.childContainer{
+  @apply flex flex-row mb-xs items-center justify-start w-full gap-3.5;
+}
+.customForm .suctomcontainer{
+  @apply flex flex-col gap-2;
+}
+.elm-container{
+  @apply flex flex-row items-center justify-center gap-xs w-full;
+}
+.elm-container .inputContainer{
+  @apply flex items-center w-full rounded-md bg-white text-grey border border-grey-shd4 p-2 gap-s;
+}
+.inputContainer .charInput{
+  @apply flex-row items-center justify-center text-grey rounded-sm text-sm bg-grey-shd7 w-6 h-6;
+}
+
+@tailwind utilities;
+
