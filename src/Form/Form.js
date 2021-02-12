@@ -27,6 +27,10 @@ const CustomForm = () => {
     const handleSubmit = e => {
         e.preventDefault();
         console.log(inputValues);
+        //another easy way to get form data
+        const data = new FormData(e.target);
+        const value = Object.fromEntries(data.entries());
+        console.log(value);
     }
 
     const removeElm = (index,name) => {
